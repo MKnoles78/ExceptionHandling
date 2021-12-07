@@ -1,9 +1,13 @@
-
+//Chained Exceptions
 public class UsingChainedExceptions {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		try {
+			method1();
+		} catch (Exception exception) {
+			// exceptions thrown from method1
+			exceptions.printStackTrace();
+		}
 	}
 
 }
