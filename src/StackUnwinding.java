@@ -20,7 +20,7 @@ public class StackUnwinding {
 				System.out.printf("%s\t", element.getClassName());
 				System.out.printf("%s\t", element.getFileName());
 				System.out.printf("%s\t", element.getLineNumber());
-				System.out.printf("%s\t", element.getMethodName());
+				System.out.printf("%s%n", element.getMethodName());
 			}
 		}
 	}
