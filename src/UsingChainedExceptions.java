@@ -19,4 +19,19 @@ public class UsingChainedExceptions {
 			throw new Exception("Exception thrown in method1", exception);
 		}
 	}
+
+	// call method3; throws exception back to method1
+	public static void method2() throws Exception {
+		try {
+			method3();
+		} catch (Exception exception) {
+			// exception thrown from method3
+			throw new Exception("Exception thrown in method2", exception);
+		}
+	}
+
+	// throw Exception back to method2
+	public static void method3() throws Exception {
+		throw new Exception("Exception thrown in method3");
+	}
 }
