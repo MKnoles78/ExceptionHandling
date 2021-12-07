@@ -21,10 +21,23 @@ public class StackUnwinding {
 				System.out.printf("%s\t", element.getFileName());
 				System.out.printf("%s\t", element.getLineNumber());
 				System.out.printf("%s\t", element.getMethodName());
-
 			}
 		}
+	}
 
+	// call method2; throw exception back to main
+	public static void method1() throws Exception {
+		method2();
+	}
+
+	// call method3; throw exceptions back to method1
+	public static void method2() throws Exception {
+		method3();
+	}
+
+	// throw Exception back to method2
+	public static void method3() throws Exception {
+		throw new Exception("Exception thrown in method3");
 	}
 
 }
